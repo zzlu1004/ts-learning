@@ -1,3 +1,4 @@
 /node_modules/
 /src/node_modules/
+/01_TypeScript/03_webpack_ts/node_modules/
 .idea/
