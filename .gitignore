@@ -1,4 +1,6 @@
 /node_modules/
 /src/node_modules/
 /01_TypeScript/03_webpack_ts/node_modules/
+/02_vue3/vite-study/node_modules/
+/02_vue3/vue3_study/node_modules/
 .idea/
