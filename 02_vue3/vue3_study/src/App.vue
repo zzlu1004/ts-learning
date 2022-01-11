@@ -14,8 +14,8 @@ export default defineComponent({
   name: "App",
   // 需求：显示用户的相关信息，点击按钮，可以更新用户的相关信息数据
   setup() {
-    // const obj: any = { // 解决 obj.gender = '男' 错误提示
-    const obj = {
+    const obj: any = { // 解决 obj.gender = '男' 错误提示
+    // const obj = {
       name: '小明',
       age: 20,
       wife: {
@@ -46,7 +46,9 @@ export default defineComponent({
       user.gender = '男' // 这种方式，视图可以更新，而且这个数据最终也添加到目标对象obj中
 
       // user对象或者obj对象中移除一个已经存在的属性，哪一种方式会影响界面的更新
-      // delete obj.age
+      delete obj.age
+      // delete user.age
+      // 总结：如果操作代理对象，目标对象中的数据也会随之变化，同时如果想要在操作数据的时候，界面也要跟着重新更新渲染，那么也是操作代理对象
     }
     return {
       user,
